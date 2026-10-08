@@ -117,4 +117,7 @@ export const API = {
     conversations: "/conversation",
     messages: (id: string) => `/conversation/${id}/messages`,
   },
+  phoneNumbers: {
+    list: "/phone-numbers",
+  },
 } as const;

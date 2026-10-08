@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,249 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-lg font-medium;
+  }
+
+  h6 {
+    @apply text-base font-medium;
+  }
+
+  /* body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+}
+
+html,
+body {
+  /* height: 100%;
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  font-size: 16px; */
+
+  /* background-image: linear-gradient(to bottom right, #041527, #18396b);
+  color: rgb(119, 119, 119); */
+
+  /* background-image: linear-gradient(to bottom right, #000306, #000206);
+  color: rgb(255, 255, 255); */
+  height: 100%;
+}
+.page-header {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
+}
+/* .top-menu {
+  background-color: #000000;
+  border-bottom: 0.5px solid #ffffff;
+  padding: 25px 0px;
+} */
+.top-menu {
+  background-color: #000000;
+  border-bottom: 0.5px solid #ffffff;
+  padding: 25px 20px;
+
+  display: flex;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.user-name {
+  padding: 6px 12px;
+  background: #1f1f1f;
+  border-radius: 20px;
+}
+.top-eachNave {
+  padding: 8px;
+  margin: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  /* color: rgb(44 78 134); */
+}
+.side-eachNave {
+  margin: 3px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.top-eachNave.active {
+  color: rgb(198, 45, 72);
+  text-decoration: none;
+}
+.nav {
+  padding: 41px 5px;
+  margin-bottom: 20px;
+}
+.eachNave {
+  margin: 10px;
+  color: rgb(15, 105, 270);
+  text-decoration: none;
+}
+.eachNave.active {
+  color: rgb(198, 45, 72);
+  text-decoration: none;
+}
+.jsxCode {
+  background-color: black;
+  color: green;
+  padding: 15px;
+  margin: 26px 0px;
+}
+.jsxCode .example {
+  color: rgb(15, 105, 270);
+}
+.main-content {
+  margin-left: 10px;
+  padding: 20px;
+  flex-grow: 1;
+}
+.left-side-bar {
+  padding: 20px 25px 20px 20px;
+  border-right: 1px solid #252a3a;
+}
+#content {
+  display: flex;
+}
+#sider {
+  width: 250px;
+  background-image: linear-gradient(to bottom right, #041527, #233d64);
+  border-right: 0.5px solid #233d64;
+  padding-top: 41px;
+  min-height: 100vh;
+}
+#pages {
+  margin: 0px 20px 20px 20px;
+  padding-top: 41px;
+}
+.sidebarContent {
+  margin: 0px 20px 20px 20px;
+}
+a {
+  text-decoration: none;
+  color: #0056b3;
+  /* font-weight: bold; */
+  font-weight: 100;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a.active {
+  color: rgb(198, 45, 72);
+}
+.pageLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pageLinks a {
+  margin-right: 7px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pageLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.MockLayout {
+  padding-bottom: 30px;
+}
+.main {
+  display: flex;
+  margin-top: 0px; /* Offset for the fixed header */
+}
+.sideBar {
+  width: 17%;
+  background-color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  /* border-right: 0.1px solid #ffffff; */
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+.note {
+  font-size: 13px;
+  font-style: italic;
+}
+strong {
+  color: #c62d48;
 }

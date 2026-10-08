@@ -1,11 +1,14 @@
-import Image from "next/image";
-import { redirect } from "next/navigation";
+"use client";
 
-export default async function Home() {
-  // return (
-  //   <div>
-  //     <h1>App Page F</h1>
-  //   </div>
-  // );
-  redirect("/login");
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/login");
+  }, [router]);
+
+  return <div>Loading...</div>;
 }
