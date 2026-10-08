@@ -66,32 +66,19 @@ export default function Header() {
     },
     {
       id: 3,
-      title: "Fetch Cache",
-      link: "/fetch-cache",
+      title: "Phone Numbers",
+      link: "/phone-numbers",
       type: "link",
       auth: "protected",
     },
     {
       id: 4,
-      title: "CSR",
-      link: "/csr",
+      title: "Customers",
+      link: "/customers",
       type: "link",
       auth: "protected",
     },
-    {
-      id: 5,
-      title: "Server Actions",
-      link: "/whatAreServerActions",
-      type: "link",
-      auth: "protected",
-    },
-    {
-      id: 6,
-      title: "AI Chat",
-      link: "/ai-chat",
-      type: "link",
-      auth: "protected",
-    },
+
     {
       id: 11,
       title: `${user?.firstName ?? ""} ${user?.lastName ?? ""}`,

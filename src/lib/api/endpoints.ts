@@ -120,4 +120,8 @@ export const API = {
   phoneNumbers: {
     list: "/phone-numbers",
   },
+  customers: {
+    list: "/customers",
+    byId: (id: string) => `/customers/${id}`,
+  },
 } as const;
